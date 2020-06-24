@@ -18,7 +18,6 @@ export const signIn = (userId) => {
   };
 };
 
-
 export const signOut = () => {
   return {
     type: SIGN_OUT,
@@ -40,9 +39,10 @@ export const fetchStreams = () => async (dispatch) => {
 };
 
 export const editStreams = (id, formValue) => async (dispatch) => {
-  const response = await streams.put(`/streams/${id}`, formValue);
+  const response = await streams.patch(`/streams/${id}`, formValue);
 
   dispatch({ type: EDIT_STREAM, payload: response.data });
+  history.push("/");
 };
 
 export const fetchStream = (id) => async (dispatch) => {
