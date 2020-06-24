@@ -1,0 +1,58 @@
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 300px;
+      background-color: green;
+    }
+
+    .content {
+      margin-left: 300px;
+    }
+
+    .modal {
+      margin: auto;
+      position: absolute;
+      height: 90vh;
+      width: 90vw;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      background: rgba(63, 63, 63, 0.95);
+      backdrop-filter: blur(25px);
+      z-index: 2;
+      box-sizing: border-box;
+    }
+
+    .modal-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 150px;
+      background-color: lightgray;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="modal">
+    <div class="modal-body">
+      <h1>I'm a modal</h1>
+    </div>
+  </div>
+  <div class="sidebar">I am a sidebar</div>
+  <div class="content"><h1>I'm the content</h1></div>
+</body>
